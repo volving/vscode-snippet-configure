@@ -1,0 +1,53 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"{% x %}": {
+		"scope": "html",
+		"prefix": ["%%", "{%"],
+		"body": [
+			"{% $0 %}",
+		],
+		"description": "Add logic tag"
+	},
+	"{{ xxx }}": {
+		"scope": "html",
+		"prefix": ["{{"],
+		"body": [
+			"{{ $0 }}"
+		],
+		"description": "Add block"
+	},
+	"{% block x %}": {
+		"scope": "html",
+		"prefix": ["blo", "block"],
+		"body": [
+			"{% block $1 %}",
+			"$0",
+			"{% endblock %}"
+		],
+		"description": "Add block"
+	},
+	"{% macro x(y) %}": {
+		"scope": "html",
+		"prefix": ["mac", "macro"],
+		"body": [
+			"{% macro ${1:func}(${2:params}) %}",
+			"$0",
+			"{% endmacro %}"
+		],
+		"description": "Add macro"
+	},
+	"{% import x as y %}": {
+		"scope": "html",
+		"prefix": ["imp", "import"],
+		"body": [
+			"{% import '$1' ${2:as $3} %}",
+		],
+		"description": "Import a macro"
+	},
+}
